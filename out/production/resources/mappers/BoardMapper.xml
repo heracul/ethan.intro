@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ethan.web.intro.board.mapper.BoardMapper">
+    <select id="selectBoardList" resultType="ethan.web.intro.board.vo.BoardVO">
+      SELECT id
+		,title
+        ,contents
+        ,file_id as fileId
+        ,crt_user_id as crtUserId
+        ,crt_tm as crtTm
+        ,upt_user_id as uptUserId
+        ,upt_tm as uptTm
+      FROM et_board
+    </select>
+</mapper>
